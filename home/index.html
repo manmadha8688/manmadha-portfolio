@@ -1,0 +1,550 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.15.1/devicon.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/how_i_create.css">
+    
+    <link rel="stylesheet" href="../css/proficiency.css">
+    <link rel="stylesheet" href="../css/education.css">
+    <link rel="stylesheet" href="../css/projects.css">
+    
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="icon" href="../images/fav.jpeg" type="image/png">
+
+
+    <title>Manmadha Jayamangala — Full Stack Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        
+        body {
+            font-family: 'Poppins', sans-serif; /* More modern font */
+            background: #f8f9fa;
+            padding-top: 100px; /* Offset for navbar */
+            display: flex;
+            justify-content: center;
+        }
+
+
+        /* Dark Mode */
+        .dark-mode {
+            background: #121212;
+            color: white;
+        }
+
+        .dark-mode .navbar-container  {
+            background: #1e1e1e;
+            color: white;
+        }
+        .dark-mode .education-box{
+             background: black;
+        }
+        .dark-mode .menu li a,
+        .dark-mode .logo {
+            color: white;
+        }
+
+        .dark-mode .menu li a:hover {
+            color: #007bff;
+        }
+
+        .dark-mode .social-icons a {
+            color: white;
+        }
+
+        /* Navbar Styling */
+        .navbar-container {
+            width: 80%;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .menu li a:hover {
+            color: #007bff;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            font-size: 20px;
+            color: black;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #007bff;
+        }
+
+        /* Dark Mode Toggle */
+        .theme-toggle {
+            cursor: pointer;
+            font-size: 20px;
+            margin-left: 20px;
+        }
+
+        .dark-mode .theme-toggle {
+            color: white;
+        }
+
+        /* Sticky Effect */
+        .sticky {
+            top: 0;
+            width: 100%;
+            border-radius: 0;
+            padding: 15px 50px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Scroll to Top Button */
+        #scrollToTop {
+            position: fixed;
+            bottom: 15px;
+            right: 5px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+        }
+        #scrollToTop img{
+            border-radius: 20px;
+            width: 80%;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar-container" id="navbar">
+        <div class="logo">Manmadha Jayamangala</div>
+        <ul class="menu">
+            <li><a href="#about-me">About me</a></li>
+            <li><a href="#how-i-create">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact-me">Contact me</a></li>
+        </ul>
+        
+        <span class="theme-toggle" onclick="toggleTheme()">🌙</span> <!-- Theme Toggle -->
+    </nav>
+
+    <!-- About Me Section -->
+    <div class="content">
+        
+        <div id="about-me"></div>
+         <div class="about">
+    <!-- Left Side Content -->
+    <div class="hero-content">
+      <h1 class="hero-title">Hey there! 👋</h1>
+      <h3 class="para">I am a passionate <strong>Full Stack Software Developer 🚀</strong> with experience in building web and mobile applications using JavaScript, Django, and other modern frameworks.<br><br>
+      I specialize in creating <strong>scalable, AI-powered, real-time applications</strong> and love turning complex ideas into clean and interactive experiences.</h3>
+      
+      <div class="hero-buttons">
+        <a href="#contact-me" class="btn-primary">Contact Me</a>
+        <button class="btn-secondary" onclick="window.open('resume.pdf', '_blank')">Download Resume</button>
+      </div>
+    </div>
+
+    <!-- Right Side Animation/Image -->
+    <div class="hero-animation">
+        <div class="profile">
+        <div class="flip-card">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+    </div>
+  </div>
+        
+        <div id="how-i-create" ></div>
+        
+        <div class="container" >
+        
+        <div class="left">
+            <img src="../images/code.gif" alt="Developer Illustration">
+        </div>
+        
+        <div class="right">
+            
+            <h1 >How i create</h1>
+            <p>Crazy Full Stack Developer exploring various tech stacks.</p>
+            
+           <!-- Tech Stack Icons -->
+<div class="tech-icons">
+    <div>
+        <i class="devicon-html5-plain colored"></i>
+        <p>HTML</p>
+    </div>
+    <div>
+        <i class="devicon-css3-plain colored"></i>
+        <p>CSS</p>
+    </div>
+    <div>
+        <i class="devicon-javascript-plain colored"></i>
+        <p>JavaScript</p>
+    </div>
+    <div>
+        <i class="devicon-django-plain colored"></i>
+        <p>Django</p>
+    </div>
+    <div>
+        <i class="devicon-mysql-plain colored"></i>
+        <p>MySQL</p>
+    </div>
+    
+<div><i class="devicon-postgresql-plain colored"></i><p>PostgreSQL</p></div>
+
+    <div>
+    <i class="devicon-python-plain colored"></i>
+    <p>Python</p>
+</div>
+
+<div><i class="devicon-git-plain colored"></i><p>Git</p></div>
+<div><i class="devicon-github-original colored"></i><p>GitHub</p></div>
+<div><i class="devicon-vscode-plain colored"></i><p>VS Code</p></div>
+    
+    
+</div>
+
+
+
+            <ul class="features">
+                <li>Develop highly interactive Frontend/User Interfaces for web and mobile applications, 
+                    blending technology and creativity to build scalable, efficient, and user-friendly experiences.</li>
+                <li>Build Progressive Web Applications (PWA) using SPA architecture.</li>
+                <li>From designing intuitive frontends to architecting robust backends, I bring ideas to life with clean code and modern frameworks.</li>
+                <li>Integrate ML models & third-party services into my projects for enhanced functionality and automation.</li>
+            </ul>
+        </div>
+    </div>
+
+
+        
+        <div id="proficiency"></div>
+        <div class="proficiency">
+        <h1>Proficiency</h1>
+
+        <p>Programming</p>
+        <div class="progress-bar">
+            <div class="progress" style="width: 65%;"></div>
+        </div>
+
+        <p>Frontend/Design</p>
+        <div class="progress-bar">
+            <div class="progress" style="width: 80%;"></div>
+        </div>
+
+        <p>Backend</p>
+        <div class="progress-bar">
+            <div class="progress" style="width: 70%;"></div>
+        </div>
+
+        
+        <p>Machine Learning</p>
+        <div class="progress-bar">
+            <div class="progress" style="width: 40%;"></div>
+        </div>
+    </div>
+
+        
+        <div id="education"></div>
+        <h1 class="education">Education</h1>
+    
+    <div class="education-container">
+        
+        <div class="animated-image">
+            
+            <img src="../images/hokage.png" alt="Animated Degree">
+        </div>
+        <section class="education-section">
+            
+            
+        <!-- B.Tech Section -->
+        <div class="education-box">
+            <div class="education-header">
+                <div class="edu-icon1">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="edu-content">
+                    <h3>B.Tech in Computer Science & Engineering</h3>
+                    <p><strong>Bapatla Engineering College (Autonomous)</strong> | 2021 - 2025</p>
+                    <p>Specialized in Full Stack Development with expertise in modern web technologies.</p>
+                </div>
+                <i class="fas fa-chevron-down" style="color: #f97316;"></i>
+            </div>
+
+            <div class="expand-content">
+                <p>Bapatla Engineering College (BEC) is a private engineering college established in 1981, sponsored by the Bapatla Education Society. It offers courses in technology and science, including information technology, machine learning, and data science.</p>
+                <p>📍 Located in Bapatla, Andhra Pradesh</p><br>
+                <p>🌐 <a href="https://becbapatla.ac.in/" target="_blank">Visit College Website</a></p><br>
+                <img src="../images/bapatla college.jpg" alt="Bapatla Engineering College" class="edu-image">
+            </div>
+        </div>
+        
+        <!-- Intermediate Section -->
+        <div class="education-box">
+            <div class="education-header">
+                <div class="edu-icon2">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="edu-content">
+                    <h3>Intermediate (MPC)</h3>
+                    <p><strong>Sri Bharathi Junior College, Eluru</strong> | 2019 - 2021</p>
+                    <p>Focused on Mathematics, Physics, and Chemistry, strengthening analytical and <br>problem-solving skills.</p>
+                </div>
+                <i class="fas fa-chevron-down" style="color: #f97316;"></i>
+            </div>
+
+            <div class="expand-content">
+                <p>Sri Bharathi Junior College is a well-established institution in Eluru known for its rigorous academic curriculum in Mathematics, Physics, and Chemistry.</p>
+                <p>📍 Eluru, Andhra Pradesh</p>
+                <p>📞 Contact: 08812 - 249225</p>
+                <p>📧 Email: avijaykumarsb@gmail.com</p>
+            </div>
+        </div>
+
+        <!-- School Section -->
+        <div class="education-box">
+            <div class="education-header">
+                <div class="edu-icon3">
+                    <i class="fas fa-school"></i>
+                </div>
+                <div class="edu-content">
+                    <h3>Secondary Education (10th Grade)</h3>
+                    <p><strong>Siddhartha Vidyalaya, Satrampadu, Eluru</strong> | 2019</p>
+                    <p>Completed foundational education with a focus on core subjects, developing a strong academic base.</p>
+                </div>
+                <i class="fas fa-chevron-down" style="color: #f97316;"></i>
+            </div>
+
+            <div class="expand-content">
+                <p>KPR & JL Siddhartha Vidyalaya is a reputed school located in Satrampadu, Eluru, known for academic excellence and student development.</p>
+                <p>📍 Satrampadu, Eluru, Andhra Pradesh</p><br>
+                <p>🌐 <a href="https://school.careers360.com/schools/siddhartha-quest-school-eluru" target="_blank">Visit School Website</a></p><br>
+                <img src="../images/school.jpg" alt="Siddhartha Vidyalaya" class="edu-image">
+            </div>
+        </div>
+
+    </section>
+    </div>
+        
+        <div id="projects"></div>
+
+        <h1 class="project-heading">Projects & Hands-on Experience</h1>
+
+    <section class="projects-section">
+        
+        <div class="projects-container">
+            
+            <!-- Project 1 -->
+            <div class="project-card">
+                <img class="project-bg" src="../images/loan.jpeg" alt="finance project">
+                <div class="project-overlay"></div>
+                <h3 class="project-title">Loan Agency Management</h3>
+                <div class="project-info">
+                    <p class="project-description">
+                        Developed a full-stack Loan Management Web Application with borrower-lender dashboards, real-time tracking, and secure payment features using Django.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://loan-agency.onrender.com" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/manmadha8688/money.git" target="_blank"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <img class="project-bg" src="../images/skin.jpeg" alt="skin disease project">
+                <div class="project-overlay"></div>
+                <h3 class="project-title">Skin Disease Detection</h3>
+                <div class="project-info">
+                    <p class="project-description">
+                        An AI-powered system for detecting skin diseases using deep learning models and real-time predictions.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://skin-project.onrender.com" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/manmadha8688/skin_project" target="_blank"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+
+    </section>
+        
+        <div id="contact-me"></div><br><br>
+        <section class="contact-section">
+        <span>
+            ----------  CONTACT ME  ----------
+        </span>
+        
+        <div class="contact-left">
+            <h2>If you like what you see,<br>
+                 let's work together 🤝</h2>
+                 <br>
+            <p>Get in touch and let me know how I can help. Fill out the form and I’ll be in touch as soon as possible.</p>
+            <div class="info">
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong></p> 
+                 <p class="details">Thokalapalli village ,nidamarru mandal ,eluru district ,andhra pradesh  534406
+                    <br><br><a href="https://www.google.com/maps/place/Thokalapalle,+Andhra+Pradesh/@16.7440851,81.3329253,6078m" target="_blank">
+                        <button class="direction" >
+                            📍 Get Directions
+                        </button>
+                    </a>
+                    
+                 </p>
+                <p><i class="fas fa-phone"></i> <strong>Phone:</strong> </p>
+                  <p class="details">  (+91)  8309623469 <br> (+91)  9346016624</p>
+                <p><i class="fas fa-envelope"></i> <strong>Email:</strong> </p>
+                  <p class="details">  manmadhajayamangala777@gmail.com</p>
+            </div>
+            <div class="social-icon">
+                <a ><i class="fab fa-facebook-f"></i></a>
+                <a ><i class="fab fa-twitter"></i></a>
+                <a ><i class="fab fa-linkedin-in"></i></a>
+                <a ><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="contact-right">
+            
+            <form action="https://formsubmit.co/manmadhajayamangala777@email.com" method="POST" class="form" id="contactform" target="_blank">
+
+                
+            <label>Name</label>           
+            <input type="text" placeholder="e.g. John Doe" id="name" name="name" required>
+            <label>Email</label> 
+            <input type="email" placeholder="e.g johndoe@mail.com" id="email" name="email" required>
+            <label>phone </label> 
+            <input type="text" placeholder="Phone Number" id="phone" maxlength="10" name="phone" required>
+            <label>Message</label> 
+            <textarea rows="4" placeholder="Write message..." id="message" maxlength="100" name="message" required></textarea>
+            <button type="submit" onclick="submitForm()">SEND Email</button>
+        </form>
+
+        </div>
+    </section>
+    <script>
+        function submitForm() {
+            // Prevent form from submitting the default way
+            
+            const form = document.getElementById("contactform");
+            // Get form data
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const message = document.getElementById("message").value;
+    
+            // Validate data
+            if (!name || !email || !phone || !message) {
+                event.preventDefault();
+                alert("Please fill out all fields!");
+                return;
+            }
+            else {
+                const isconfirm = confirm("name :"+name+"\nphone :"+phone+"\nEmail :"+email+"\nmessasge :"+message)
+                if (!isconfirm) {
+                    alert("Message cancled....!!");
+                    return false; 
+                }
+                
+                return True;
+            }
+        }
+        
+    </script>
+
+
+       
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" onclick="scrollToTop()"><img src="../images/scroll.png"></button>
+
+    <!-- JavaScript for Sticky Navbar, Dark Mode & Scroll-to-Top -->
+    <script>
+        window.addEventListener("scroll", function () {
+            let navbar = document.getElementById("navbar");
+            let scrollBtn = document.getElementById("scrollToTop");
+
+            if (window.scrollY > 50) {
+                navbar.classList.add("sticky");
+                scrollBtn.style.display = "block";
+            } else {
+                navbar.classList.remove("sticky");
+                scrollBtn.style.display = "none";
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        function toggleTheme() {
+            let body = document.body;
+            body.classList.toggle("dark-mode");
+
+            let themeToggle = document.querySelector(".theme-toggle");
+            if (body.classList.contains("dark-mode")) {
+                themeToggle.textContent = "☀️";
+            } else {
+                themeToggle.textContent = "🌙";
+            }
+        }
+    </script>
+
+</body>
+</html>

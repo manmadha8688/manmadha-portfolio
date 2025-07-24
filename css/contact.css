@@ -1,0 +1,102 @@
+ .contact-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            max-width: 1200px;
+            margin: auto;
+            margin-bottom: 10%;
+        }
+        .contact-left {
+            max-width: 50%;
+        
+        }
+        .contact-left h2 {
+            
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .contact-left p {
+            margin: 15px 0;
+            list-style: none;
+            font-size: 20px;
+        }
+        .contact-left .info {
+            margin: 10px 0;
+        }
+        .contact-left .info i {
+            margin-right: 10px;
+            color: #f97316;
+        }
+        .social-icon {
+            margin-top: 30px;
+        }
+        .social-icon a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            background: #222;
+            border-radius: 50%;
+            margin-right: 10px;
+            color: white;
+            text-decoration: none;
+        }
+        .contact-right {
+            background: #222;
+            padding: 30px;
+            border-radius: 10px;
+            width: 45%;
+            height: 100%;
+            
+        }
+      
+
+
+        
+        .contact-right input, .contact-right textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 4%;
+            margin-bottom: 4%;
+            background: #333;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            
+        }
+        .contact-right label{
+            color: lightgray;
+            
+
+        }
+        .contact-right button {
+            width: 100%;
+            padding: 12px;
+            background: #f97316;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        .contact-left .info .details{
+            margin-left: 10%;
+        }
+        .contact-section span{
+            writing-mode: vertical-rl; 
+            transform: rotate(180deg);
+            letter-spacing: 2px; 
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .direction{
+            background-color: #0a43e1;
+             color: white; 
+             padding: 5px 10px; 
+             border: none;
+              border-radius: 5px;
+               cursor: pointer;
+        }

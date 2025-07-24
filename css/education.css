@@ -1,0 +1,92 @@
+.education-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 4%;
+            max-width: 1200px;
+        }
+
+        .animated-image {
+            
+            text-align: center;
+            width: 35%;
+        }
+
+        .animated-image img {
+            width: 40%;
+            width: 70%;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .education-section {
+            flex: 1;
+            text-align: left;
+            width: 60%;           
+
+        }
+
+        .education-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.4s ease-in-out;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .education-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .edu-icon1 {
+            font-size: 30px;
+            color: #f97316;
+            padding-right: 2%;
+        }
+        .edu-icon2 {
+            font-size: 30px;
+            color: #f97316;
+            padding-right: 2%;
+        }
+        .edu-icon3 {
+            font-size: 30px;
+            color: #f97316;
+            padding-right: 5%;
+        }
+
+
+
+        .edu-content h3 {
+            font-size: 22px;
+            margin: 0;
+            color: #f97316;
+        }
+
+        .expand-content {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            text-align: left;
+        }
+
+        .education-box:hover .expand-content {
+            max-height: 500px;
+            opacity: 1;
+            padding-top: 10px;
+        }
+        .education{
+            margin-bottom: 5%;
+            margin-top:7%;
+            padding-left:10%;
+        }
