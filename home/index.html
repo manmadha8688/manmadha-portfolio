@@ -22,22 +22,139 @@
 
     <title>Manmadha Jayamangala — Full Stack Developer</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            transition: background 0.3s ease, color 0.3s ease;
-        }
-
-        
         body {
-            font-family: 'Poppins', sans-serif; /* More modern font */
-            background: #f8f9fa;
-            padding-top: 100px; /* Offset for navbar */
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: white;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+     .navbar-desktop {
+            width: 80%;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 20px 50px;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            transition: all 0.3s ease-in-out;
         }
 
+    
+    .navbar-desktop .logo {
+      
+            font-size: 26px;
+            font-weight: 700;
+            color: #333;
+    }
+
+    .navbar-desktop .menu {
+    
+        list-style: none;
+            display: flex;
+            gap: 40px;
+    }
+
+    .navbar-desktop .menu li a {
+         text-decoration: none;
+            color: rgb(43, 40, 40);
+            font-size: 18px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+    }
+
+    .navbar-desktop .menu li a:hover {
+      color: #00f7ff;
+    }
+
+    /* Theme Toggle */
+    .theme-toggle {
+      font-size: 20px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    /* Mobile Navbar (Hidden by Default) */
+    .navbar-mobile {
+      display: none;
+      flex-direction: column;
+      background-color: #585858;
+      color: white;
+    }
+
+    .mobile-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+    }
+
+    .mobile-logo {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .mobile-menu-toggle {
+      font-size: 24px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .mobile-menu li a {
+      color: white;
+      padding: 12px;
+      display: block;
+    }
+
+    .mobile-menu li a:hover {
+      background-color: #222;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .navbar-desktop {
+        display: none;
+      }
+
+      .navbar-mobile {
+        display: flex;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .mobile-logo {
+        font-size: 16px;
+      }
+
+      .mobile-menu li a {
+        font-size: 15px;
+      }
+    }
 
         /* Dark Mode */
         .dark-mode {
@@ -65,47 +182,7 @@
             color: white;
         }
 
-        /* Navbar Styling */
-        .navbar-container {
-            width: 80%;
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: white;
-            padding: 20px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .logo {
-            font-size: 26px;
-            font-weight: 700;
-            color: #333;
-        }
-
-        .menu {
-            list-style: none;
-            display: flex;
-            gap: 40px;
-        }
-
-        .menu li a {
-            text-decoration: none;
-            color: black;
-            font-size: 18px;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .menu li a:hover {
-            color: #007bff;
-        }
+        
 
         /* Social Icons */
         .social-icons {
@@ -162,95 +239,39 @@
         html {
             scroll-behavior: smooth;
         }
-/* Responsive Design */
-@media (max-width: 768px) {
-    body {
-        padding-top: 80px; /* Adjust top space for smaller nav */
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar-container {
-        width: 95%;
-        padding: 15px 20px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-
-    .logo {
-        font-size: 22px;
-    }
-
-    .menu {
-        flex-direction: column;
-        width: 100%;
-        gap: 15px;
-    }
-
-    .menu li a {
-        font-size: 16px;
-        padding-left: 5px;
-    }
-
-    .social-icons {
-        width: 100%;
-        justify-content: flex-start;
-        gap: 10px;
-    }
-
-    .theme-toggle {
-        font-size: 18px;
-        margin-left: 0;
-    }
-
-    .loan-body p {
-        font-size: 15px;
-        line-height: 1.5;
-    }
-
-    #scrollToTop {
-        bottom: 20px;
-        right: 15px;
-    }
-
-    #scrollToTop img {
-        width: 60%;
-    }
-}
-
-/* Optional: Extra small devices */
-@media (max-width: 480px) {
-    .logo {
-        font-size: 20px;
-    }
-
-    .menu li a {
-        font-size: 15px;
-    }
-
-    .loan-body p {
-        font-size: 14px;
-    }
-}
 
     </style>
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar-container" id="navbar">
-        <div class="logo">Manmadha Jayamangala</div>
-        <ul class="menu">
-            <li><a href="#about-me">About me</a></li>
-            <li><a href="#how-i-create">Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact-me">Contact me</a></li>
-        </ul>
-        
-        <span class="theme-toggle" onclick="toggleTheme()">🌙</span> <!-- Theme Toggle -->
-    </nav>
+     <nav class="navbar-desktop" id="navbar-desktop">
+    <div class="logo">Manmadha Jayamangala</div>
+    <ul class="menu">
+      <li><a href="#about-me">About me</a></li>
+      <li><a href="#how-i-create">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact-me">Contact me</a></li>
+    </ul>
+    <span class="theme-toggle" onclick="toggleTheme()">🌙</span>
+  </nav>
+
+  <!-- Mobile Navbar -->
+  <nav class="navbar-mobile" id="navbar-desktop">
+    <div class="mobile-header">
+      <div class="mobile-logo">Manmadha Jayamangala</div>
+      <span class="theme-toggle" onclick="toggleTheme()">🌙</span>
+      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+    </div>
+    <ul class="mobile-menu" id="mobileMenu">
+      <li><a href="#about-me">Me</a></li>
+      <li><a href="#how-i-create">What I Do</a></li>
+      <li><a href="#education">Learn</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#contact-me">Contact</a></li>
+    </ul>
+  </nav>
 
     <!-- About Me Section -->
     <div class="content">
@@ -530,9 +551,10 @@
                 <a ><i class="fab fa-youtube"></i></a>
             </div>
         </div>
+        <div class="form-contact">
         <div class="contact-right">
             
-            <form action="https://formsubmit.co/manmadhajayamangala777@gmail.com" method="POST" class="form" id="contactform" >
+            <form action="https://formsubmit.co/manmadhajayamangala777@email.com" method="POST" class="form" id="contactform" target="_blank">
 
                 
             <label>Name</label>           
@@ -546,6 +568,7 @@
             <button type="submit" onclick="submitForm()">SEND Email</button>
         </form>
 
+        </div>
         </div>
     </section>
     <script>
@@ -586,19 +609,30 @@
     <button id="scrollToTop" onclick="scrollToTop()"><img src="../images/scroll.png"></button>
 
     <!-- JavaScript for Sticky Navbar, Dark Mode & Scroll-to-Top -->
-    <script>
-        window.addEventListener("scroll", function () {
-            let navbar = document.getElementById("navbar");
-            let scrollBtn = document.getElementById("scrollToTop");
+    <script>function toggleMobileMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    }
 
-            if (window.scrollY > 50) {
-                navbar.classList.add("sticky");
-                scrollBtn.style.display = "block";
-            } else {
-                navbar.classList.remove("sticky");
-                scrollBtn.style.display = "none";
-            }
-        });
+    function toggleTheme() {
+      document.body.classList.toggle("dark-theme");
+    }
+
+        window.addEventListener("scroll", function () {
+    let navbar = document.getElementById("navbar-desktop");
+    let scrollBtn = document.getElementById("scrollToTop");
+
+    if ( scrollBtn) {
+        if (window.scrollY > 50) {
+            navbar.classList.add("sticky");
+            scrollBtn.style.display = "block";
+        } else {
+            navbar.classList.remove("sticky");
+            scrollBtn.style.display = "none";
+        }
+    }
+});
+
 
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: "smooth" });

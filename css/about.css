@@ -184,29 +184,47 @@
     margin-bottom: 10px;
   }
 
-  .hero-animation {
-    padding: 10px;
+  .hero-title {
+    font-size: 24px;
   }
 
-  .hero-animation img {
-    max-width: 200px;
-    width: 80%;
+  .hero-content h3 {
+    font-size: 14px;
+  }
+
+  .hero-buttons a,
+  .hero-buttons button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  
+  .hero-animation {
+    padding: 10px;
+    text-align: center;
   }
 
   .profile {
-    width: 80%;
-    height: 320px;
-    margin: 30px auto 0;
+    width: 200px;       /* Reduce size */
+    height: 320px;      /* Adjust proportion */
+    margin: -200px auto; /* Center horizontally */
   }
 
   .flip-card {
-    height: 100%;
+    transition: transform 1.5s ease-in-out;
   }
 
   .front,
   .back {
     border-radius: 20px;
+    background-size: cover;
+    background-position: center;
   }
+
+  .back {
+    filter: blur(8px); /* Slightly less blur for small screens */
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -224,7 +242,31 @@
     padding: 8px 16px;
   }
 
-  .profile {
-    height: 280px;
+  
+  .hero-animation {
+    padding: 10px;
+    text-align: center;
   }
+
+  .profile {
+    width: 200px;       /* Reduce size */
+    height: 320px;      /* Adjust proportion */
+    margin: -200px auto; /* Center horizontally */
+  }
+
+  .flip-card {
+    transition: transform 1.5s ease-in-out;
+  }
+
+  .front,
+  .back {
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .back {
+    filter: blur(8px); /* Slightly less blur for small screens */
+  }
+
 }

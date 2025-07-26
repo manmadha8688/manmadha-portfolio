@@ -113,8 +113,7 @@
     }
 
     .education {
-        padding-left: 0;
-        margin-top: 10%;
+        margin: 10% auto;
     }
 }
 @media (max-width: 480px) {

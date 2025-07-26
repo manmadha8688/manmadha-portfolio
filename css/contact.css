@@ -107,7 +107,9 @@
     padding: 30px 20px;
     margin-bottom: 15%;
   }
-
+  .form-contact{
+    padding: 50px;
+  }
   .contact-left,
   .contact-right {
     max-width: 100%;
@@ -142,7 +144,7 @@
 
   .contact-right {
     margin-top: 30px;
-    padding: 20px;
+    padding: 30px;
   }
 
   .contact-right input,
@@ -173,9 +175,7 @@
     font-size: 22px;
   }
 
-  .contact-right {
-    padding: 15px;
-  }
+ 
 
   .contact-right input,
   .contact-right textarea,
