@@ -91,22 +91,7 @@
       100% { transform: translateY(0px); }
     }
 
-    @media (max-width: 768px) {
-      .about {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .hero-buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .hero-buttons a, .hero-buttons button {
-        margin-bottom: 15px;
-      }
-    }
+    
 
     .profile {
             position: relative;
@@ -162,3 +147,84 @@
         .profile:hover .back {
             filter: blur(0px); /* Remove blur after flip */
         }
+
+        @media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    margin-left: 0;
+    padding: 40px 15px;
+    text-align: center;
+  }
+
+  .hero-content {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .hero-content h3 {
+    font-size: 16px;
+    margin-top: 15px;
+    color: #555;
+  }
+
+  .hero-buttons {
+    margin-top: 25px;
+  }
+
+  .hero-buttons a,
+  .hero-buttons button {
+    font-size: 15px;
+    padding: 10px 20px;
+    margin-right: 8px;
+    margin-bottom: 10px;
+  }
+
+  .hero-animation {
+    padding: 10px;
+  }
+
+  .hero-animation img {
+    max-width: 200px;
+    width: 80%;
+  }
+
+  .profile {
+    width: 80%;
+    height: 320px;
+    margin: 30px auto 0;
+  }
+
+  .flip-card {
+    height: 100%;
+  }
+
+  .front,
+  .back {
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .hero-content h3 {
+    font-size: 14px;
+  }
+
+  .hero-buttons a,
+  .hero-buttons button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .profile {
+    height: 280px;
+  }
+}

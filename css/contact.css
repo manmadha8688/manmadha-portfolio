@@ -100,3 +100,86 @@
               border-radius: 5px;
                cursor: pointer;
         }
+
+        @media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+    padding: 30px 20px;
+    margin-bottom: 15%;
+  }
+
+  .contact-left,
+  .contact-right {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .contact-left h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .contact-left p,
+  .contact-left .info,
+  .contact-left .info i,
+  .contact-left .info .details {
+    font-size: 16px;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .contact-left .info .details {
+    margin-left: 0;
+  }
+
+  .social-icon {
+    text-align: center;
+  }
+
+  .social-icon a {
+    margin: 5px;
+  }
+
+  .contact-right {
+    margin-top: 30px;
+    padding: 20px;
+  }
+
+  .contact-right input,
+  .contact-right textarea {
+    font-size: 14px;
+  }
+
+  .contact-right button {
+    font-size: 14px;
+  }
+
+  .contact-section span {
+    display: none; /* Hide vertical label on small screens */
+  }
+
+  .direction {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 20px 15px;
+  }
+
+  .contact-left h2 {
+    font-size: 22px;
+  }
+
+  .contact-right {
+    padding: 15px;
+  }
+
+  .contact-right input,
+  .contact-right textarea,
+  .contact-right button {
+    font-size: 13px;
+  }
+}

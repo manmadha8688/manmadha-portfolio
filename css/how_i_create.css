@@ -75,3 +75,64 @@
             margin-right: 5px;
             color: #f5a623;
         }
+
+        @media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .container .right h1 {
+        font-size: 28px;
+    }
+
+    .right p {
+        font-size: 16px;
+    }
+
+    .tech-icons {
+        justify-content: center;
+    }
+
+    .features {
+        font-size: 18px;
+        text-align: left;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .left img {
+        width: 90%;
+    }
+
+    .container .right h1 {
+        font-size: 24px;
+    }
+
+    .right p {
+        font-size: 14px;
+    }
+
+    .tech-icons {
+        gap: 15px;
+        font-size: 32px;
+    }
+
+    .tech-icons div {
+        font-size: 14px;
+    }
+
+    .features {
+        font-size: 16px;
+    }
+}

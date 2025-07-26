@@ -90,3 +90,64 @@
             margin-top:7%;
             padding-left:10%;
         }
+
+        @media (max-width: 768px) {
+    .education-container {
+        flex-direction: column;
+        margin-left: 2%;
+        padding: 0 5%;
+    }
+
+    .animated-image {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .animated-image img {
+        width: 60%;
+    }
+
+    .education-section {
+        width: 100%;
+    }
+
+    .education {
+        padding-left: 0;
+        margin-top: 10%;
+    }
+}
+@media (max-width: 480px) {
+    .education-container {
+        padding: 0 3%;
+        margin-left: 0;
+    }
+
+    .animated-image img {
+        width: 80%;
+    }
+
+    .edu-content h3 {
+        font-size: 18px;
+    }
+
+    .education-box {
+        padding: 15px;
+    }
+
+    .edu-icon1,
+    .edu-icon2,
+    .edu-icon3 {
+        font-size: 24px;
+        padding-right: 4%;
+    }
+
+    .expand-content {
+        font-size: 14px;
+    }
+
+    .education {
+        margin-top: 10%;
+        padding-left: 0;
+    }
+}

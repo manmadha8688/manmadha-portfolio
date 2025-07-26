@@ -122,3 +122,66 @@
             background: #ffae42;
         }
         
+        @media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        gap: 20px;
+    }
+
+    .project-card {
+        width: 90%;
+        height: 240px;
+    }
+
+    .project-title {
+        font-size: 18px;
+        bottom: 30px;
+    }
+
+    .project-card:hover .project-title {
+        bottom: 140px;
+    }
+
+    .project-description {
+        font-size: 13px;
+    }
+
+    .project-links a {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+
+    .projects-section {
+        padding: 30px 10px;
+    }
+
+    .project-heading {
+        padding-left: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card {
+        height: 200px;
+    }
+
+    .project-title {
+        font-size: 16px;
+        bottom: 25px;
+    }
+
+    .project-card:hover .project-title {
+        bottom: 120px;
+    }
+
+    .project-description {
+        font-size: 12px;
+    }
+
+    .project-links a {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+}
