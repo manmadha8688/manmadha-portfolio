@@ -5,43 +5,183 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Loading...</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
     #loader {
       position: fixed;
       width: 100%;
       height: 100%;
-      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
-        url("images/saringon5.jpg") no-repeat center center;
-      background-size: cover;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+      background-attachment: fixed;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       z-index: 9999;
       color: white;
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       text-align: center;
+      overflow: hidden;
     }
-
+    
+    #loader::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(249, 115, 22, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(6, 246, 82, 0.05) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    
+    .loader-container {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    
     #sharingan {
-      width: 120px;
-      height: 120px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
-      box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.8);
       background-size: cover;
       background-position: center;
+      position: relative;
+      box-shadow: 
+        0 0 30px rgba(255, 0, 0, 0.6),
+        0 0 60px rgba(255, 0, 0, 0.3),
+        inset 0 0 20px rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
     }
-
+    
+    #sharingan::before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #ff0000, #ff6b6b, #ff0000);
+      z-index: -1;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    
     @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+      0% { transform: rotate(0deg) scale(1); }
+      50% { transform: rotate(180deg) scale(1.1); }
+      100% { transform: rotate(360deg) scale(1); }
     }
-
+    
+    @keyframes pulse {
+      0%, 100% { 
+        transform: scale(1);
+        opacity: 0.5;
+      }
+      50% { 
+        transform: scale(1.05);
+        opacity: 0.8;
+      }
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
     #title {
-      margin-top: 50px;
-      font-size: 18px;
-      font-weight: bold;
+      font-size: 1.25rem;
+      font-weight: 600;
       opacity: 0;
-      transition: opacity 0.5s ease-in-out;
+      transition: all 0.8s ease-in-out;
+      background: linear-gradient(135deg, #ffffff, #e2e8f0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    .loading-bar {
+      width: 200px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 2px;
+      overflow: hidden;
+      margin-top: 1rem;
+      position: relative;
+    }
+    
+    .loading-progress {
+      height: 100%;
+      background: linear-gradient(90deg, #ff0000, #ff6b6b, #ff0000);
+      border-radius: 2px;
+      width: 0%;
+      transition: width 0.3s ease;
+      position: relative;
+    }
+    
+    .loading-progress::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      animation: shimmer 1.5s infinite;
+    }
+    
+    @keyframes shimmer {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+    
+    .loading-text {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 0.5rem;
+      font-weight: 400;
+    }
+    
+    @media (max-width: 768px) {
+      #sharingan {
+        width: 120px;
+        height: 120px;
+      }
+      
+      #title {
+        font-size: 1.1rem;
+      }
+      
+      .loading-bar {
+        width: 180px;
+      }
     }
   </style>
 </head>
@@ -49,8 +189,14 @@
 
   <!-- Loader -->
   <div id="loader">
-    <div id="sharingan"></div>
-    <div id="title">Loading...</div>
+    <div class="loader-container">
+      <div id="sharingan"></div>
+      <div id="title">Loading...</div>
+      <div class="loading-bar">
+        <div class="loading-progress"></div>
+      </div>
+      <div class="loading-text">Preparing your experience...</div>
+    </div>
   </div>
 
   <!-- Main Content -->
@@ -64,6 +210,8 @@
   document.addEventListener("DOMContentLoaded", function () {
     const sharingan = document.getElementById("sharingan");
     const title = document.getElementById("title");
+    const loadingProgress = document.querySelector(".loading-progress");
+    const loadingText = document.querySelector(".loading-text");
 
     const images = [
       "images/saringon1.jpeg",
@@ -81,10 +229,32 @@
       "A Glimpse into the World I Built..."
     ];
 
+    const loadingMessages = [
+      "Initializing chakra system...",
+      "Loading jutsu database...",
+      "Preparing genjutsu matrix...",
+      "Finalizing Uchiha protocols...",
+      "Welcome to the world I built..."
+    ];
+
     let index = 0;
+    let progress = 0;
+    
+    // Initialize
     sharingan.style.backgroundImage = `url(${images[0]})`;
     title.innerText = titles[0];
     title.style.opacity = 1;
+    loadingText.innerText = loadingMessages[0];
+
+    // Start progress animation
+    const progressInterval = setInterval(() => {
+      progress += 2;
+      loadingProgress.style.width = progress + "%";
+      
+      if (progress >= 100) {
+        clearInterval(progressInterval);
+      }
+    }, 100);
 
     const interval = setInterval(() => {
       index++;
@@ -92,22 +262,34 @@
       if (index < 4) {
         sharingan.style.backgroundImage = `url(${images[index]})`;
         sharingan.style.animation = "spin 2s linear infinite";
+        loadingText.innerText = loadingMessages[index];
       } else {
         sharingan.style.backgroundImage = `url(${images[4]})`;
         sharingan.style.animation = "none";
+        loadingText.innerText = loadingMessages[4];
       }
 
       title.style.opacity = 0;
       setTimeout(() => {
         title.innerText = titles[index];
         title.style.opacity = 1;
-      }, 1000);
+        title.style.animation = "fadeInUp 0.8s ease-out";
+      }, 500);
     }, 1000);
 
     // After 5 seconds: stop loader and redirect
     setTimeout(() => {
       clearInterval(interval);
-      window.location.href = "home/";  // 🔁 Redirection
+      clearInterval(progressInterval);
+      
+      // Fade out effect
+      const loader = document.getElementById("loader");
+      loader.style.transition = "opacity 0.8s ease-out";
+      loader.style.opacity = "0";
+      
+      setTimeout(() => {
+        window.location.href = "home/";  // 🔁 Redirection
+      }, 800);
     }, 5000);
   });
 </script>
