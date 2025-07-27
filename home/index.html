@@ -276,9 +276,9 @@
     <div class="content">
         
         <div id="about-me"></div>
-         <div class="about">
+    <div class="about animate-on-scroll">
     <!-- Left Side Content -->
-    <div class="hero-content">
+    <div class="hero-content animate-on-scroll">
       <h1 class="hero-title">Hey there! 👋</h1>
       <h3 class="para">I am a passionate <strong>Full Stack Software Developer 🚀</strong> with experience in building web and mobile applications using JavaScript, Django, and other modern frameworks.<br><br>
       I specialize in creating <strong>scalable, AI-powered, real-time applications</strong> and love turning complex ideas into clean and interactive experiences.</h3>
@@ -290,7 +290,7 @@
     </div>
 
     <!-- Right Side Animation/Image -->
-    <div class="hero-animation">
+    <div class="hero-animation animate-on-scroll">
         <div class="profile">
         <div class="flip-card">
             <div class="front"></div>
@@ -302,7 +302,7 @@
         
         <div id="how-i-create" ></div>
         
-        <div class="container" >
+        <div class="container animate-on-scroll" >
         
         <div class="left">
             <img src="../images/code.gif" alt="Developer Illustration">
@@ -310,7 +310,7 @@
         
         <div class="right">
             
-            <h1 >How i create</h1>
+            <h3 >My Development Workflow</h3>
             <p>Crazy Full Stack Developer exploring various tech stacks.</p>
             
            <!-- Tech Stack Icons -->
@@ -366,33 +366,37 @@
         
         <div id="proficiency"></div>
         <div class="proficiency">
-        <h1>Proficiency</h1>
+    <h2>Skills & Expertise</h2>
 
-        <p>Programming</p>
-        <div class="progress-bar">
-            <div class="progress" style="width: 65%;"></div>
-        </div>
-
-        <p>Frontend/Design</p>
-        <div class="progress-bar">
-            <div class="progress" style="width: 80%;"></div>
-        </div>
-
-        <p>Backend</p>
-        <div class="progress-bar">
-            <div class="progress" style="width: 70%;"></div>
-        </div>
-
-        
-        <p>Machine Learning</p>
-        <div class="progress-bar">
-            <div class="progress" style="width: 40%;"></div>
-        </div>
+    <p>💻 Programming Fundamentals (Python, JavaScript)</p>
+    <div class="progress-bar">
+        <div class="progress" style="width: 65%;"></div>
     </div>
+
+    <p>🎨 Frontend Development (HTML, CSS, JavaScript)</p>
+    <div class="progress-bar">
+        <div class="progress" style="width: 80%;"></div>
+    </div>
+
+    <p>⚙️ Backend Development (Python, SQL, PostgreSQL)</p>
+    <div class="progress-bar">
+        <div class="progress" style="width: 70%;"></div>
+    </div>
+
+    <p>🧩 Frameworks & Libraries (Django)</p>
+    <div class="progress-bar">
+        <div class="progress" style="width: 60%;"></div>
+    </div>
+
+    <p>🤖 Machine Learning (Basics – Model Building, NumPy, Pandas)</p>
+    <div class="progress-bar">
+        <div class="progress" style="width: 40%;"></div>
+    </div>
+</div>
 
         
         <div id="education"></div>
-        <h1 class="education">Education</h1>
+        <h2 class="education">Education</h2>
     
     <div class="education-container">
         
@@ -609,6 +613,7 @@
     <button id="scrollToTop" onclick="scrollToTop()"><img src="../images/scroll.png"></button>
 
     <!-- JavaScript for Sticky Navbar, Dark Mode & Scroll-to-Top -->
+    <script src="./scroll-animations.js"></script>
     <script>function toggleMobileMenu() {
       const menu = document.getElementById("mobileMenu");
       menu.style.display = menu.style.display === "flex" ? "none" : "flex";
